@@ -1,0 +1,107 @@
+"use client"
+
+import Link from "next/link"
+import { useMemo, useState } from "react"
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+
+import { ViewToggle } from "@/components/view-toggle"
+import { Filters, type FilterValues } from "@/components/filters"
+import { AmendmentCard, type Amendment } from "@/components/record-card"
+import Topbar from "@/components/topbar"
+
+export default function AmendmentsPage() {
+  // Demo dataset for the UI
+  const data = useMemo<Amendment[]>(
+    () => [
+      {
+        id: "1",
+        date: "September 01, 2025",
+        tags: ["LEGAL FRAMEWORK"],
+        status: "IMPLEMENTED",
+        title: "Digital Authentication Requirements for Public Consultation Submissions",
+        summary:
+          "Updated requirements for digital verification of consultation responses to ensure authenticity and prevent automated submissions. All organizations submitting formal responses must now use verified digital certificates.",
+        referenceNo: "GOVT/2025/142",
+        effectiveDate: "September 15, 2025",
+        impact: "High Impact",
+        files: [
+          { kind: "pdf", label: "PDF (285 KB)" },
+          { kind: "doc", label: "Word Doc (195 KB)" },
+        ],
+      },
+    ],
+    [],
+  )
+
+  const [filters, setFilters] = useState<FilterValues>({
+    category: "all",
+    year: "all",
+    status: "all",
+  })
+  const [view, setView] = useState<"list" | "grid">("list")
+
+  const filtered = data.filter((item) => {
+    const byCategory = filters.category === "all" || item.tags.map((t) => t.toLowerCase()).includes(filters.category)
+    const byYear = filters.year === "all" || (item.effectiveDate?.toLowerCase().includes(filters.year) ?? false)
+    const byStatus = filters.status === "all" || item.status.toLowerCase() === filters.status.replace("-", " ")
+    return byCategory && byYear && byStatus
+  })
+
+  function clearAll() {
+    setFilters({ category: "all", year: "all", status: "all" })
+  }
+
+  return (
+    <main className="container">
+      {/* Breadcrumb */}
+      <Topbar/>
+      <div className="p-4 sm:p-6 mx-auto absolute right-[5%] left-[5%] xl:left-[10%] xl:right-[10%] items-center justify-between">
+        
+      <div className="items-left w-full">
+        <nav aria-label="Breadcrumb" className="mb-6 items-left">
+        <ol className="flex items-center gap-2 text-sm text-muted-foreground">
+          <li>
+            <Link href="/" className="hover:text-foreground transition-colors">
+              Home
+            </Link>
+          </li>
+          <li aria-hidden="true">/</li>
+          <li className="text-foreground">Latest Amendments</li>
+        </ol>
+      </nav>
+
+      {/* Filters */}
+      <section aria-labelledby="filters" className="mb-6">
+        <h2 id="filters" className="sr-only">
+          Filters
+        </h2>
+        <div className="grid gap-4 md:grid-cols-[1fr_1fr_1fr_auto]">
+          <Filters value={filters} onChange={setFilters} />
+          <Button variant="destructive" className="justify-self-start md:justify-self-end" onClick={clearAll}>
+            Clear All
+          </Button>
+        </div>
+      </section>
+      </div>
+
+      {/* Header and View Toggle */}
+      <div className="mb-4 flex items-center justify-between">
+        <h1 className="text-2xl font-semibold tracking-tight text-balance">Amendment Records</h1>
+        <ViewToggle value={view} onChange={setView} />
+      </div>
+
+      {/* Records */}
+      {filtered.length === 0 ? (
+        <p className="text-muted-foreground">No amendments match your filters.</p>
+      ) : (
+        <div className={cn(view === "grid" ? "grid gap-6 md:grid-cols-2 lg:grid-cols-3" : "flex flex-col gap-6")}>
+          {filtered.map((item) => (
+            <AmendmentCard key={item.id} amendment={item} />
+          ))}
+        </div>
+      )}
+      </div>
+    </main>
+  )
+}
