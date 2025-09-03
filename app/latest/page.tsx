@@ -69,10 +69,9 @@ export default function AmendmentsPage() {
   }
 
   return (
-    <main className="container">
+    <main className="container mx-auto">
       {/* Breadcrumb */}
-      <Topbar/>
-      <div className="p-4 sm:p-6 mx-auto absolute right-[5%] left-[5%] xl:left-[10%] xl:right-[10%] items-center justify-between">
+      <div className="p-4 sm:p-6">
         
       <div className="items-left w-full">
         <nav aria-label="Breadcrumb" className="mb-6 items-left">
