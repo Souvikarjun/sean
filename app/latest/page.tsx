@@ -30,6 +30,22 @@ export default function AmendmentsPage() {
           { kind: "doc", label: "Word Doc (195 KB)" },
         ],
       },
+      {
+        id: "2",
+        date: "September 01, 2025",
+        tags: ["LEGAL FRAMEWORK"],
+        status: "IMPLEMENTED",
+        title: "Digital Authentication Requirements for Public Consultation Submissions",
+        summary:
+          "Updated requirements for digital verification of consultation responses to ensure authenticity and prevent automated submissions. All organizations submitting formal responses must now use verified digital certificates.",
+        referenceNo: "GOVT/2025/142",
+        effectiveDate: "September 15, 2025",
+        impact: "High Impact",
+        files: [
+          { kind: "pdf", label: "PDF (285 KB)" },
+          { kind: "doc", label: "Word Doc (195 KB)" },
+        ],
+      },
     ],
     [],
   )
