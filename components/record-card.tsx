@@ -3,8 +3,9 @@
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Calendar, Bookmark, Share2, FileText, FileIcon } from "lucide-react"
+import { Calendar, Bookmark, Share2, FileText, FileIcon,} from "lucide-react"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
 
 export type Amendment = {
   id: string
@@ -18,6 +19,7 @@ export type Amendment = {
   impact?: "Low Impact" | "Medium Impact" | "High Impact"
   files?: { kind: "pdf" | "doc"; label: string }[]
 }
+
 
 export function AmendmentCard({ amendment }: { amendment: Amendment }) {
   return (
@@ -93,7 +95,7 @@ export function AmendmentCard({ amendment }: { amendment: Amendment }) {
               </Button>
             ))}
           </div>
-          <Button className="self-start sm:self-auto">View Details</Button>
+          <Link href={`/latest/amendments/${amendment.id}`}><Button className="self-start sm:self-auto">View Details</Button></Link> 
         </div>
       </div>
     </Card>
