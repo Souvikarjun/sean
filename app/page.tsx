@@ -4,7 +4,7 @@ import { Scale, Phone, Mail, Users, Clock } from "lucide-react"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
       <header className="bg-slate-800 border-b border-slate-700">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -38,14 +38,14 @@ export default function HomePage() {
       </div> */}
 
       {/* Hero Section */}
-      <section className="py-20 bg-slate-900">
+      <section className="py-25 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl font-bold mb-6 text-balance">
+              <h1 className="text-5xl font-bold mb-10 text-balance">
                 Welcome to Amendment <span className="text-blue-400">Sentiment Analyzer</span>
               </h1>
-              <p className="text-xl text-slate-300 mb-8 leading-relaxed">
+              <p className="text-xl text-foreground/70 mb-10 leading-relaxed">
                 Analyze public sentiment on government amendments and policy changes. Submit your feedback, track public
                 opinion, and receive expert insights through our advanced AI-powered platform.
               </p>
@@ -61,7 +61,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="flex justify-center">
-              <Card className="bg-slate-800 border-slate-700 p-8 text-center">
+              <Card className="bg-slate-800 border-slate-700 p-8 text-center ">
                 <div className="mb-4">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-500 rounded-full mb-4">
                     <Clock className="h-8 w-8 text-white" />
@@ -76,38 +76,38 @@ export default function HomePage() {
       </section>
 
       {/* Statistics Section */}
-      <section className="py-16 bg-slate-900">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
+            <Card className="text-center bg-slate-800">
               <div className="text-5xl font-bold text-orange-500 mb-2">50000</div>
               <div className="text-slate-300">Amendments Analyzed</div>
-            </div>
+            </Card>
             <div className="text-center">
               <Card className="bg-slate-800 border-slate-700 p-6">
                 <div className="text-5xl font-bold text-orange-500 mb-2">2500</div>
                 <div className="text-slate-300">Active Users</div>
               </Card>
             </div>
-            <div className="text-center">
+            <Card className="text-center bg-slate-800">
               <div className="text-5xl font-bold text-orange-500 mb-2">95%</div>
               <div className="text-slate-300">% Accuracy Rate</div>
-            </div>
-            <div className="text-center">
+            </Card>
+            <Card className="text-center bg-slate-800">
               <div className="text-5xl font-bold text-orange-500 mb-2">24</div>
               <div className="text-slate-300">Hour Support</div>
-            </div>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Get Started Section */}
-      <section className="py-20 bg-slate-900">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="lg:w-2/3">
-              <h2 className="text-4xl font-bold text-white mb-6 text-balance">Get Started with Amendment Analysis</h2>
-              <p className="text-xl text-slate-300 leading-relaxed">
+              <h2 className="text-4xl font-bold text-foreground mb-6 text-balance">Get Started with Amendment Analysis</h2>
+              <p className="text-xl text-foreground/70 leading-relaxed">
                 Join our platform to access advanced sentiment analysis tools and contribute to government policy
                 discussions.
               </p>
