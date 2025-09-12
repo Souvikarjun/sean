@@ -18,7 +18,7 @@ export default function AmendmentsPage() {
       {
         id: "123456",
         date: "September 01, 2025",
-        tags: ["LEGAL FRAMEWORK", "CORPORATE AFFAIRS"],
+        tags: ["LEGAL FRAMEWORK"],
         status: "PASSED",
         title: "THE LIMITED LIABILITY PARTNERSHIP (AMENDMENT) BILL, 2021GOVTORDINARY BILL",
         summary:
@@ -27,14 +27,14 @@ export default function AmendmentsPage() {
         effectiveDate: "August 4, 2021",
         impact: "High Impact",
         files: [
-          { kind: "pdf", label: "PDF (285 KB)" },
-          { kind: "doc", label: "Word Doc (195 KB)" },
+          { kind: "pdf", label: "PDF (285 KB)", link: "/"},
+          { kind: "doc", label: "Word Doc (195 KB)", link: "/"},
         ],
       },
       {
         id: "654321",
         date: "August 28, 2025",
-        tags: ["CORPORATE AFFAIRS"],
+        tags: ["LEGAL FRAMEWORK"],
         status: "ASSENTED",
         title: "THE INSURANCE (AMENDMENT) BILL, 2021GOVTORDINARY BILL",
         summary:
@@ -43,24 +43,40 @@ export default function AmendmentsPage() {
         effectiveDate: "March 8, 2021",
         impact: "High Impact",
         files: [
-          { kind: "pdf", label: "PDF (285 KB)" },
-          { kind: "doc", label: "Word Doc (195 KB)" },
+          { kind: "pdf", label: "PDF (285 KB)", link: "/"},
+          { kind: "doc", label: "Word Doc (195 KB)", link: "/"},
         ],
       },
       {
         id: "873877",
         date: "August 28, 2025",
-        tags: ["CORPORATE AFFAIRS"],
+        tags: ["LEGAL FRAMEWORK"],
         status: "ASSENTED",
         title: "The Insolvency and Bankruptcy Code (Second Amendment) Bill, 2020GOVTORDINARY BILL",
         summary:
           "The Insolvency and Bankruptcy Code (Second Amendment) Act, 2020 was not a permanent change to the insolvency law but a temporary, time-bound economic shock absorber. It effectively created a 'breathing space' for Indian businesses by Ring-fencing the period of the COVID-19 lockdown.Preventing a wave of insolvencies of otherwise healthy companies.Protecting honest management from personal liability for decisions made during an unforeseen global crisis.This measure was widely seen as a necessary intervention to preserve economic value and prevent the collapse of businesses reeling from the impact of the pandemic.",
         referenceNo: "6OF2021",
         effectiveDate: "March 8, 2021",
-        impact: "High Impact",
+        impact: "Low Impact",
         files: [
-          { kind: "pdf", label: "PDF (285 KB)" },
-          { kind: "doc", label: "Word Doc (195 KB)" },
+          { kind: "pdf", label: "PDF (285 KB)", link: "/"},
+          { kind: "doc", label: "Word Doc (195 KB)", link: "/"},
+        ],
+      },
+      {
+        id: "973648",
+        date: "August 28, 2025",
+        tags: ["LEGAL FRAMEWORK"],
+        status: "ASSENTED",
+        title: "The Insolvency and Bankruptcy Code (Second Amendment) Bill, 2020GOVTORDINARY BILL",
+        summary:
+          "The Insolvency and Bankruptcy Code (Amendment) Act, 2019 was a crucial legislative intervention that aimed to fix the operational and procedural gaps in the original law. By imposing a strict 330-day deadline, clarifying the rights of homebuyers, reinforcing the CoC's authority, and ensuring that approved plans are universally binding, the amendment sought to make the insolvency process in India more efficient, transparent, and effective.",
+        referenceNo: "6OF2021",
+        effectiveDate: "March 8, 2021",
+        impact: "Medium Impact",
+        files: [
+          { kind: "pdf", label: "PDF (285 KB)", link: "/"},
+          { kind: "doc", label: "Word Doc (195 KB)", link: "/"},
         ],
       },
     ],

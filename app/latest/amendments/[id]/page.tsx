@@ -85,22 +85,22 @@ const AMENDMENTS: Amendment[] = [
     neutral: 12
   },
   {
-    id: "4",
-    title: "Fourth Amendment - Search and Seizure",
+    id: "973648",
+    title: "The Insolvency and Bankruptcy Code (Amendment) Bill, 2019GOVTORDINARY BILL",
     text:
       "The right of the people to be secure in their persons, houses, papers, and effects, against unreasonable searches and seizures, " +
       "shall not be violated, and no Warrants shall issue, but upon probable cause, supported by Oath or affirmation, and particularly " +
       "describing the place to be searched, and the persons or things to be seized.",
-    summary: "Protects against unreasonable searches and seizures and requires warrants based on probable cause.",
+    summary: "The Insolvency and Bankruptcy Code (Amendment) Act, 2019 was a crucial legislative intervention that aimed to fix the operational and procedural gaps in the original law. By imposing a strict 330-day deadline, clarifying the rights of homebuyers, reinforcing the CoC's authority, and ensuring that approved plans are universally binding, the amendment sought to make the insolvency process in India more efficient, transparent, and effective.",
     points: [
       "Requires probable cause",
       "Requires particularized warrants",
       "Protects persons, houses, papers, and effects",
     ],
     category: "individual",
-    positive: 78,
-    negative: 18,
-    neutral: 4
+    positive: 70,
+    negative: 20,
+    neutral: 10
   },
 ]
 
@@ -225,7 +225,7 @@ export default function Page({params}:PageParams) {
             <AmendmentDetails amendment={current} />
 
             <div className="grid gap-6 md:grid-cols-2">
-              <SentimentCard />
+              <SentimentCard amendment={current}/>
               <WordCloudCard text={current.text} />
             </div>
 
@@ -387,13 +387,13 @@ function AmendmentDetails({ amendment }: { amendment: Amendment }) {
   )
 }
 
-const donutData = [
-  { name: "Positive", value: 85, color: "#15803d" }, // green-700
-  { name: "Neutral", value: 10, color: "#ca8a04" }, // yellow-600
-  { name: "Negative", value: 5, color: "#b91c1c" }, // red-700
-]
 
-function SentimentCard() {
+function SentimentCard({ amendment }: { amendment: Amendment }) {
+  const donutData = [
+    { name: "Positive", value: amendment.positive, color: "#15803d" }, // green-700
+    { name: "Neutral", value: amendment.negative, color: "#ca8a04" }, // yellow-600
+    { name: "Negative", value: amendment.neutral, color: "#b91c1c" }, // red-700
+  ]
   return (
     <Card>
       <CardHeader className="pb-0">
@@ -417,15 +417,15 @@ function SentimentCard() {
         <div className="mt-2 grid grid-cols-3 gap-2 text-center text-xs">
           <div>
             <div className="font-semibold text-emerald-700">Positive:</div>
-            <div>85%</div>
+            <div>{amendment.positive}</div>
           </div>
           <div>
             <div className="font-semibold text-yellow-700">Neutral:</div>
-            <div>10%</div>
+            <div>{amendment.negative}</div>
           </div>
           <div>
             <div className="font-semibold text-red-700">Negative:</div>
-            <div>5%</div>
+            <div>{amendment.neutral}</div>
           </div>
         </div>
       </CardContent>
