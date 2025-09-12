@@ -33,14 +33,14 @@ export default function AmendmentsPage() {
       },
       {
         id: "654321",
-        date: "September 01, 2025",
+        date: "August 28, 2025",
         tags: ["CORPORATE AFFAIRS"],
         status: "PASSED",
         title: "THE INSURANCE (AMENDMENT) BILL, 2021GOVTORDINARY BILL",
         summary:
-          "Updated requirements for digital verification of consultation responses to ensure authenticity and prevent automated submissions. All organizations submitting formal responses must now use verified digital certificates.",
+          "In summary, the Insurance (Amendment) Act, 2021 was a landmark reform aimed at liberalizing the insurance sector. By raising the FDI limit to 74%, the government sought to attract much-needed foreign capital, boost competition, and ultimately increase the accessibility and affordability of insurance for Indian citizens.",
         referenceNo: "GOVT/2025/079",
-        effectiveDate: "September 15, 2025",
+        effectiveDate: "September 10, 2025",
         impact: "High Impact",
         files: [
           { kind: "pdf", label: "PDF (285 KB)" },
