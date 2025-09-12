@@ -11,9 +11,9 @@ export type Amendment = {
   id: string
   date: string
   tags: string[]
-  status: "IMPLEMENTED" | "IN PROGRESS" | "DRAFT"
+  status: "PASSED" | "ASSENTED" | "DRAFT"
   title: string
-  summary: string
+  summary?: string
   referenceNo: string
   effectiveDate?: string
   impact?: "Low Impact" | "Medium Impact" | "High Impact"
@@ -41,8 +41,8 @@ export function AmendmentCard({ amendment }: { amendment: Amendment }) {
             <Badge
               className={cn(
                 "capitalize",
-                amendment.status === "IMPLEMENTED" && "bg-green-100 text-green-700",
-                amendment.status === "IN PROGRESS" && "bg-yellow-100 text-yellow-700",
+                amendment.status === "PASSED" && "bg-green-100 text-green-700",
+                amendment.status === "ASSENTED" && "bg-yellow-100 text-yellow-700",
                 amendment.status === "DRAFT" && "bg-gray-100 text-gray-700",
               )}
             >

@@ -11,17 +11,18 @@ import { AmendmentCard, type Amendment } from "@/components/record-card"
 import Topbar from "@/components/topbar"
 
 export default function AmendmentsPage() {
+
   // Demo dataset for the UI
   const data = useMemo<Amendment[]>(
     () => [
       {
-        id: "1",
+        id: "123456",
         date: "September 01, 2025",
-        tags: ["LEGAL FRAMEWORK"],
-        status: "IMPLEMENTED",
-        title: "Digital Authentication Requirements for Public Consultation Submissions",
+        tags: ["LEGAL FRAMEWORK", "CORPORATE AFFAIRS"],
+        status: "PASSED",
+        title: "THE LIMITED LIABILITY PARTNERSHIP (AMENDMENT) BILL, 2021GOVTORDINARY BILL",
         summary:
-          "Updated requirements for digital verification of consultation responses to ensure authenticity and prevent automated submissions. All organizations submitting formal responses must now use verified digital certificates.",
+          "The LLP (Amendment) Act, 2021 was a major step by the Government of India to promote entrepreneurship and position the LLP as a preferred corporate vehicle. By decriminalizing minor offenses, introducing the 'Small LLP' concept, and streamlining the justice process, the amendment aims to create a more business-friendly environment, reduce the compliance burden, and encourage more businesses to adopt the LLP structure.",
         referenceNo: "GOVT/2025/142",
         effectiveDate: "September 15, 2025",
         impact: "High Impact",
@@ -31,14 +32,14 @@ export default function AmendmentsPage() {
         ],
       },
       {
-        id: "2",
+        id: "654321",
         date: "September 01, 2025",
-        tags: ["LEGAL FRAMEWORK"],
-        status: "IMPLEMENTED",
-        title: "Digital Authentication Requirements for Public Consultation Submissions",
+        tags: ["CORPORATE AFFAIRS"],
+        status: "PASSED",
+        title: "THE INSURANCE (AMENDMENT) BILL, 2021GOVTORDINARY BILL",
         summary:
           "Updated requirements for digital verification of consultation responses to ensure authenticity and prevent automated submissions. All organizations submitting formal responses must now use verified digital certificates.",
-        referenceNo: "GOVT/2025/142",
+        referenceNo: "GOVT/2025/079",
         effectiveDate: "September 15, 2025",
         impact: "High Impact",
         files: [
