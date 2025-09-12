@@ -23,54 +23,63 @@ type Amendment = {
   summary: string
   points: string[]
   category: CategoryId
+  positive: number
+  negative: number
+  neutral: number
 }
 
 const AMENDMENTS: Amendment[] = [
   {
-    id: "1",
-    title: "First Amendment - Freedom of Speech",
+    id: "123456",
+    title: "THE LIMITED LIABILITY PARTNERSHIP (AMENDMENT) BILL, 2021GOVTORDINARY BIL",
     text:
       "Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; " +
       "or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and " +
       "to petition the Government for a redress of grievances.",
     summary:
-      "Protects freedom of religion, speech, press, assembly, and petition. Often called the cornerstone of democratic rights.",
+      "The LLP (Amendment) Act, 2021 was a major step by the Government of India to promote entrepreneurship and position the LLP as a preferred corporate vehicle. By decriminalizing minor offenses, introducing the 'Small LLP' concept, and streamlining the justice process, the amendment aims to create a more business-friendly environment, reduce the compliance burden, and encourage more businesses to adopt the LLP structure",
     points: [
-      "Prohibits government establishment of religion",
-      "Protects free exercise of religion",
-      "Guarantees freedom of speech and press",
-      "Right to peaceful assembly",
-      "Right to petition government",
+      "Decriminalization of Offences",
+      "Introduction of 'Small LLPs'",
+      "Establishment of Special Courts",
+      "Compounding of Offences",
+      "Change in Residency Requirement for Designated Partners",
     ],
     category: "individual",
+    positive: 78,
+    negative: 18,
+    neutral: 4
   },
   {
-    id: "2",
-    title: "Second Amendment - Right to Bear Arms",
+    id: "654321",
+    title: "THE INSURANCE (AMENDMENT) BILL, 2021GOVTORDINARY BILL",
     text:
       "A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, " +
       "shall not be infringed.",
-    summary: "Protects the individual right to keep and bear arms and references a well regulated militia.",
+    summary: "The Insurance (Amendment) Act, 2021 was a landmark reform aimed at liberalizing the insurance sector. By raising the FDI limit to 74%, the government sought to attract much-needed foreign capital, boost competition, and ultimately increase the accessibility and affordability of insurance for Indian citizens.",
     points: [
-      "Protects right to keep and bear arms",
-      "References well regulated militia",
-      "Informs debates on gun policy",
+      "Increase in FDI Limit",
+      "Removal of the 'Indian Owned and Controlled' Clause",
+      "Introduction of Safeguards",
     ],
     category: "individual",
   },
   {
-    id: "3",
-    title: "Third Amendment - Quartering of Soldiers",
+    id: "873877",
+    title: "The Insolvency and Bankruptcy Code (Second Amendment) Bill, 2020GOVTORDINARY BILL",
     text:
       "No Soldier shall, in time of peace be quartered in any house, without the consent of the Owner, nor in time of war, " +
       "but in a manner to be prescribed by law.",
-    summary: "Limits quartering of soldiers in private homes without the owner’s consent.",
+    summary: "The Insolvency and Bankruptcy Code (Second Amendment) Act, 2020 was not a permanent change to the insolvency law but a temporary, time-bound economic shock absorber. It effectively created a 'breathing space' for Indian businesses by Ring-fencing the period of the COVID-19 lockdown.Preventing a wave of insolvencies of otherwise healthy companies.Protecting honest management from personal liability for decisions made during an unforeseen global crisis.This measure was widely seen as a necessary intervention to preserve economic value and prevent the collapse of businesses reeling from the impact of the pandemic.",
     points: [
       "Protects privacy of homes",
       "Requires consent to quarter soldiers",
       "Applies in peace; limited in war by law",
     ],
     category: "individual",
+    positive: 78,
+    negative: 18,
+    neutral: 4
   },
   {
     id: "4",
@@ -86,6 +95,9 @@ const AMENDMENTS: Amendment[] = [
       "Protects persons, houses, papers, and effects",
     ],
     category: "individual",
+    positive: 78,
+    negative: 18,
+    neutral: 4
   },
 ]
 

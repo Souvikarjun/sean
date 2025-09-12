@@ -23,8 +23,8 @@ export default function AmendmentsPage() {
         title: "THE LIMITED LIABILITY PARTNERSHIP (AMENDMENT) BILL, 2021GOVTORDINARY BILL",
         summary:
           "The LLP (Amendment) Act, 2021 was a major step by the Government of India to promote entrepreneurship and position the LLP as a preferred corporate vehicle. By decriminalizing minor offenses, introducing the 'Small LLP' concept, and streamlining the justice process, the amendment aims to create a more business-friendly environment, reduce the compliance burden, and encourage more businesses to adopt the LLP structure.",
-        referenceNo: "GOVT/2025/142",
-        effectiveDate: "September 15, 2025",
+        referenceNo: "31OF2021",
+        effectiveDate: "August 4, 2021",
         impact: "High Impact",
         files: [
           { kind: "pdf", label: "PDF (285 KB)" },
@@ -35,12 +35,28 @@ export default function AmendmentsPage() {
         id: "654321",
         date: "August 28, 2025",
         tags: ["CORPORATE AFFAIRS"],
-        status: "PASSED",
+        status: "ASSENTED",
         title: "THE INSURANCE (AMENDMENT) BILL, 2021GOVTORDINARY BILL",
         summary:
-          "In summary, the Insurance (Amendment) Act, 2021 was a landmark reform aimed at liberalizing the insurance sector. By raising the FDI limit to 74%, the government sought to attract much-needed foreign capital, boost competition, and ultimately increase the accessibility and affordability of insurance for Indian citizens.",
-        referenceNo: "GOVT/2025/079",
-        effectiveDate: "September 10, 2025",
+          "The Insurance (Amendment) Act, 2021 was a landmark reform aimed at liberalizing the insurance sector. By raising the FDI limit to 74%, the government sought to attract much-needed foreign capital, boost competition, and ultimately increase the accessibility and affordability of insurance for Indian citizens.",
+        referenceNo: "6OF2021",
+        effectiveDate: "March 8, 2021",
+        impact: "High Impact",
+        files: [
+          { kind: "pdf", label: "PDF (285 KB)" },
+          { kind: "doc", label: "Word Doc (195 KB)" },
+        ],
+      },
+      {
+        id: "873877",
+        date: "August 28, 2025",
+        tags: ["CORPORATE AFFAIRS"],
+        status: "ASSENTED",
+        title: "The Insolvency and Bankruptcy Code (Second Amendment) Bill, 2020GOVTORDINARY BILL",
+        summary:
+          "The Insolvency and Bankruptcy Code (Second Amendment) Act, 2020 was not a permanent change to the insolvency law but a temporary, time-bound economic shock absorber. It effectively created a 'breathing space' for Indian businesses by Ring-fencing the period of the COVID-19 lockdown.Preventing a wave of insolvencies of otherwise healthy companies.Protecting honest management from personal liability for decisions made during an unforeseen global crisis.This measure was widely seen as a necessary intervention to preserve economic value and prevent the collapse of businesses reeling from the impact of the pandemic.",
+        referenceNo: "6OF2021",
+        effectiveDate: "March 8, 2021",
         impact: "High Impact",
         files: [
           { kind: "pdf", label: "PDF (285 KB)" },
