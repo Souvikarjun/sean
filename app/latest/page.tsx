@@ -43,7 +43,7 @@ export default function AmendmentsPage() {
         effectiveDate: "March 8, 2021",
         impact: "High Impact",
         files: [
-          { kind: "pdf", label: "PDF (285 KB)", link: "/"},
+          { kind: "pdf", label: "PDF (285 KB)", link: ""},
           { kind: "doc", label: "Word Doc (195 KB)", link: "/"},
         ],
       },

@@ -17,7 +17,7 @@ export type Amendment = {
   referenceNo: string
   effectiveDate?: string
   impact?: "Low Impact" | "Medium Impact" | "High Impact"
-  files?: { kind: "pdf" | "doc"; label: string }[]
+  files?: { kind: "pdf" | "doc"; label: string ; link: string}[]
 }
 
 
@@ -85,14 +85,16 @@ export function AmendmentCard({ amendment }: { amendment: Amendment }) {
         <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap items-center gap-2">
             {amendment.files?.map((f, idx) => (
+              <Link href={f.link} key={idx} target="_blank" rel="noopener noreferrer">
               <Button key={idx} variant="outline" className="gap-2 bg-transparent">
                 {f.kind === "pdf" ? (
-                  <FileText className="size-4 text-blue-600" />
+                  <FileText className="size-4 text-blue-600 hover:text-black" />
                 ) : (
-                  <FileIcon className="size-4 text-blue-600" />
+                  <FileIcon className="size-4 text-blue-600 hover:text-black" />
                 )}
                 {f.label}
               </Button>
+              </Link>
             ))}
           </div>
           <Link href={`/latest/amendments/${amendment.id}`}><Button className="self-start sm:self-auto">View Details</Button></Link> 
