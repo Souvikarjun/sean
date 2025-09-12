@@ -63,6 +63,9 @@ const AMENDMENTS: Amendment[] = [
       "Introduction of Safeguards",
     ],
     category: "individual",
+    positive: 57,
+    negative: 10,
+    neutral: 33
   },
   {
     id: "873877",
@@ -77,9 +80,9 @@ const AMENDMENTS: Amendment[] = [
       "Applies in peace; limited in war by law",
     ],
     category: "individual",
-    positive: 78,
-    negative: 18,
-    neutral: 4
+    positive: 48,
+    negative: 40,
+    neutral: 12
   },
   {
     id: "4",
