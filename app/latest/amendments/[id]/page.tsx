@@ -358,15 +358,16 @@ function Header() {
 function AmendmentDetails({ amendment }: { amendment: Amendment }) {
   return (
     <Card>
-      <CardHeader className="border-b pb-4">
+      <CardHeader className="border-b pb-4 flex justify-between">
         <CardTitle className="text-lg">{amendment.title}</CardTitle>
+        <Button variant="outline" className="border-blue-800">Generate Report</Button>
       </CardHeader>
       <CardContent className="space-y-6 pt-6">
         <section className="space-y-2">
           <h3 className="text-sm font-semibold">Amendment Text</h3>
           <blockquote className="rounded-md border bg-muted/40 p-4 text-sm leading-relaxed">
             {amendment.text}
-          </blockquote>
+          </blockquote> 
         </section>
 
         <section className="space-y-2">
@@ -417,15 +418,15 @@ function SentimentCard({ amendment }: { amendment: Amendment }) {
         <div className="mt-2 grid grid-cols-3 gap-2 text-center text-xs">
           <div>
             <div className="font-semibold text-emerald-700">Positive:</div>
-            <div>{amendment.positive}</div>
+            <div>{amendment.positive}%</div>
           </div>
           <div>
             <div className="font-semibold text-yellow-700">Neutral:</div>
-            <div>{amendment.negative}</div>
+            <div>{amendment.negative}%</div>
           </div>
           <div>
             <div className="font-semibold text-red-700">Negative:</div>
-            <div>{amendment.neutral}</div>
+            <div>{amendment.neutral}%</div>
           </div>
         </div>
       </CardContent>
