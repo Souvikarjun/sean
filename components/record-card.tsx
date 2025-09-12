@@ -3,21 +3,23 @@
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Calendar, Bookmark, Share2, FileText, FileIcon } from "lucide-react"
+import { Calendar, Bookmark, Share2, FileText, FileIcon,} from "lucide-react"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
 
 export type Amendment = {
   id: string
   date: string
   tags: string[]
-  status: "IMPLEMENTED" | "IN PROGRESS" | "DRAFT"
+  status: "PASSED" | "ASSENTED" | "DRAFT"
   title: string
-  summary: string
+  summary?: string
   referenceNo: string
   effectiveDate?: string
   impact?: "Low Impact" | "Medium Impact" | "High Impact"
   files?: { kind: "pdf" | "doc"; label: string }[]
 }
+
 
 export function AmendmentCard({ amendment }: { amendment: Amendment }) {
   return (
@@ -39,8 +41,8 @@ export function AmendmentCard({ amendment }: { amendment: Amendment }) {
             <Badge
               className={cn(
                 "capitalize",
-                amendment.status === "IMPLEMENTED" && "bg-green-100 text-green-700",
-                amendment.status === "IN PROGRESS" && "bg-yellow-100 text-yellow-700",
+                amendment.status === "PASSED" && "bg-green-100 text-green-700",
+                amendment.status === "ASSENTED" && "bg-yellow-100 text-yellow-700",
                 amendment.status === "DRAFT" && "bg-gray-100 text-gray-700",
               )}
             >
@@ -93,7 +95,7 @@ export function AmendmentCard({ amendment }: { amendment: Amendment }) {
               </Button>
             ))}
           </div>
-          <Button className="self-start sm:self-auto">View Details</Button>
+          <Link href={`/latest/amendments/${amendment.id}`}><Button className="self-start sm:self-auto">View Details</Button></Link> 
         </div>
       </div>
     </Card>

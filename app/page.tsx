@@ -1,103 +1,154 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
+import { Scale, Phone, Mail, Users, Clock } from "lucide-react"
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-background text-foreground">
+      {/* Header */}
+      <header className="bg-slate-800 border-b border-slate-700">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <Scale className="h-8 w-8 text-blue-400" />
+            <div>
+              <h1 className="text-xl font-bold text-white">Amendment Analyzer</h1>
+              <p className="text-sm text-slate-300">Government Portal</p>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </header>
+
+      {/* Contact Bar */}
+      {/* <div className="bg-blue-600 py-3">
+        <div className="container mx-auto px-4 flex items-center justify-between">
+          <div className="flex items-center gap-8">
+            <div className="flex items-center gap-2 text-white">
+              <Phone className="h-4 w-4" />
+              <span className="text-sm">Helpline: 1800-XXX-XXXX</span>
+            </div>
+            <div className="flex items-center gap-2 text-white">
+              <Mail className="h-4 w-4" />
+              <span className="text-sm">support@gov.in</span>
+            </div>
+          </div>
+          <select className="bg-blue-500 text-white border border-blue-400 rounded px-3 py-1 text-sm">
+            <option>English</option>
+          </select>
+        </div>
+      </div> */}
+
+      {/* Hero Section */}
+      <section className="py-25 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-5xl font-bold mb-10 text-balance">
+                Welcome to Amendment <span className="text-blue-400">Sentiment Analyzer</span>
+              </h1>
+              <p className="text-xl text-foreground/70 mb-10 leading-relaxed">
+                Analyze public sentiment on government amendments and policy changes. Submit your feedback, track public
+                opinion, and receive expert insights through our advanced AI-powered platform.
+              </p>
+              <div className="flex gap-4">
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">Login</Button>
+                <Button
+                  variant="outline"
+                  className="border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white px-8 py-3 text-lg bg-transparent"
+                >
+                  <Users className="mr-2 h-5 w-5" />
+                  Register
+                </Button>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <Card className="bg-slate-800 border-slate-700 p-8 text-center ">
+                <div className="mb-4">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-500 rounded-full mb-4">
+                    <Clock className="h-8 w-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">24/7 Analysis</h3>
+                <p className="text-slate-300">Real-time sentiment analysis and public opinion tracking</p>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Statistics Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card className="text-center bg-slate-800">
+              <div className="text-5xl font-bold text-orange-500 mb-2">50000</div>
+              <div className="text-slate-300">Amendments Analyzed</div>
+            </Card>
+            <div className="text-center">
+              <Card className="bg-slate-800 border-slate-700 p-6">
+                <div className="text-5xl font-bold text-orange-500 mb-2">2500</div>
+                <div className="text-slate-300">Active Users</div>
+              </Card>
+            </div>
+            <Card className="text-center bg-slate-800">
+              <div className="text-5xl font-bold text-orange-500 mb-2">95%</div>
+              <div className="text-slate-300">% Accuracy Rate</div>
+            </Card>
+            <Card className="text-center bg-slate-800">
+              <div className="text-5xl font-bold text-orange-500 mb-2">24</div>
+              <div className="text-slate-300">Hour Support</div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Get Started Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div className="lg:w-2/3">
+              <h2 className="text-4xl font-bold text-foreground mb-6 text-balance">Get Started with Amendment Analysis</h2>
+              <p className="text-xl text-foreground/70 leading-relaxed">
+                Join our platform to access advanced sentiment analysis tools and contribute to government policy
+                discussions.
+              </p>
+            </div>
+            <div className="flex gap-4">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">Login</Button>
+              <Button
+                variant="outline"
+                className="border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white px-8 py-3 text-lg bg-transparent"
+              >
+                <Users className="mr-2 h-5 w-5" />
+                Register
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-slate-800 border-t border-slate-700 py-12">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
+            <div className="flex items-center gap-3">
+              <Scale className="h-8 w-8 text-blue-400" />
+              <span className="text-xl font-bold text-white">Amendment Analyzer</span>
+            </div>
+            <div className="flex gap-8">
+              <a href="#" className="text-slate-300 hover:text-white transition-colors">
+                Privacy Policy
+              </a>
+              <a href="#" className="text-slate-300 hover:text-white transition-colors">
+                Terms of Service
+              </a>
+              <a href="#" className="text-slate-300 hover:text-white transition-colors">
+                Help Center
+              </a>
+            </div>
+            <div className="text-slate-400 text-sm">© 2025 Amendment Sentiment Analyzer. All rights reserved.</div>
+          </div>
+        </div>
       </footer>
     </div>
-  );
+  )
 }

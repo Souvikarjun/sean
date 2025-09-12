@@ -11,23 +11,72 @@ import { AmendmentCard, type Amendment } from "@/components/record-card"
 import Topbar from "@/components/topbar"
 
 export default function AmendmentsPage() {
+
   // Demo dataset for the UI
   const data = useMemo<Amendment[]>(
     () => [
       {
-        id: "1",
+        id: "123456",
         date: "September 01, 2025",
         tags: ["LEGAL FRAMEWORK"],
-        status: "IMPLEMENTED",
-        title: "Digital Authentication Requirements for Public Consultation Submissions",
+        status: "PASSED",
+        title: "THE LIMITED LIABILITY PARTNERSHIP (AMENDMENT) BILL, 2021GOVTORDINARY BILL",
         summary:
-          "Updated requirements for digital verification of consultation responses to ensure authenticity and prevent automated submissions. All organizations submitting formal responses must now use verified digital certificates.",
-        referenceNo: "GOVT/2025/142",
-        effectiveDate: "September 15, 2025",
+          "The LLP (Amendment) Act, 2021 was a major step by the Government of India to promote entrepreneurship and position the LLP as a preferred corporate vehicle. By decriminalizing minor offenses, introducing the 'Small LLP' concept, and streamlining the justice process, the amendment aims to create a more business-friendly environment, reduce the compliance burden, and encourage more businesses to adopt the LLP structure.",
+        referenceNo: "31OF2021",
+        effectiveDate: "August 4, 2021",
         impact: "High Impact",
         files: [
-          { kind: "pdf", label: "PDF (285 KB)" },
-          { kind: "doc", label: "Word Doc (195 KB)" },
+          { kind: "pdf", label: "PDF (285 KB)", link: "/"},
+          { kind: "doc", label: "Word Doc (195 KB)", link: "/"},
+        ],
+      },
+      {
+        id: "654321",
+        date: "August 28, 2025",
+        tags: ["LEGAL FRAMEWORK"],
+        status: "ASSENTED",
+        title: "THE INSURANCE (AMENDMENT) BILL, 2021GOVTORDINARY BILL",
+        summary:
+          "The Insurance (Amendment) Act, 2021 was a landmark reform aimed at liberalizing the insurance sector. By raising the FDI limit to 74%, the government sought to attract much-needed foreign capital, boost competition, and ultimately increase the accessibility and affordability of insurance for Indian citizens.",
+        referenceNo: "6OF2021",
+        effectiveDate: "March 8, 2021",
+        impact: "High Impact",
+        files: [
+          { kind: "pdf", label: "PDF (285 KB)", link: "/"},
+          { kind: "doc", label: "Word Doc (195 KB)", link: "/"},
+        ],
+      },
+      {
+        id: "873877",
+        date: "August 28, 2025",
+        tags: ["LEGAL FRAMEWORK"],
+        status: "ASSENTED",
+        title: "The Insolvency and Bankruptcy Code (Second Amendment) Bill, 2020GOVTORDINARY BILL",
+        summary:
+          "The Insolvency and Bankruptcy Code (Second Amendment) Act, 2020 was not a permanent change to the insolvency law but a temporary, time-bound economic shock absorber. It effectively created a 'breathing space' for Indian businesses by Ring-fencing the period of the COVID-19 lockdown.Preventing a wave of insolvencies of otherwise healthy companies.Protecting honest management from personal liability for decisions made during an unforeseen global crisis.This measure was widely seen as a necessary intervention to preserve economic value and prevent the collapse of businesses reeling from the impact of the pandemic.",
+        referenceNo: "6OF2021",
+        effectiveDate: "March 8, 2021",
+        impact: "Low Impact",
+        files: [
+          { kind: "pdf", label: "PDF (285 KB)", link: "/"},
+          { kind: "doc", label: "Word Doc (195 KB)", link: "/"},
+        ],
+      },
+      {
+        id: "973648",
+        date: "August 28, 2025",
+        tags: ["LEGAL FRAMEWORK"],
+        status: "ASSENTED",
+        title: "The Insolvency and Bankruptcy Code (Second Amendment) Bill, 2020GOVTORDINARY BILL",
+        summary:
+          "The Insolvency and Bankruptcy Code (Amendment) Act, 2019 was a crucial legislative intervention that aimed to fix the operational and procedural gaps in the original law. By imposing a strict 330-day deadline, clarifying the rights of homebuyers, reinforcing the CoC's authority, and ensuring that approved plans are universally binding, the amendment sought to make the insolvency process in India more efficient, transparent, and effective.",
+        referenceNo: "6OF2021",
+        effectiveDate: "March 8, 2021",
+        impact: "Medium Impact",
+        files: [
+          { kind: "pdf", label: "PDF (285 KB)", link: "/"},
+          { kind: "doc", label: "Word Doc (195 KB)", link: "/"},
         ],
       },
     ],
@@ -53,10 +102,9 @@ export default function AmendmentsPage() {
   }
 
   return (
-    <main className="container">
+    <main className="container mx-auto">
       {/* Breadcrumb */}
-      <Topbar/>
-      <div className="p-4 sm:p-6 mx-auto absolute right-[5%] left-[5%] xl:left-[10%] xl:right-[10%] items-center justify-between">
+      <div className="p-4 sm:p-6">
         
       <div className="items-left w-full">
         <nav aria-label="Breadcrumb" className="mb-6 items-left">
